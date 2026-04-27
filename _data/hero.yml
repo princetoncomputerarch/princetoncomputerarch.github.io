@@ -11,14 +11,6 @@ hero:
   subtitle_top:     "NY Architecture and Systems Day"
   subtitle_bottom:  "Princeton University · May 15, 2026"
 
-# The "held in conjunction with…" line under the hero.
-# For NY ASD this isn't really a sub-event of a larger conference, so we
-# repurpose it as a tagline. Set link_url to "" to render plain text only.
-held_with:
-  prefix:    "Hosted by"
-  link_text: "Princeton University"
-  link_url:  "https://www.princeton.edu"
-
 # Quick-look info shown right under the hero.
 key_info:
   - label: "Date"
