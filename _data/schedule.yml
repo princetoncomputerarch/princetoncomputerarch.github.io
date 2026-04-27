@@ -42,7 +42,7 @@ items:
 
   - kind: slot
     time: "12:30 PM – 2:00 PM"
-    title: "Lunch (on your own — suggestions to be provided)"
+    title: "Lunch"
 
   - kind: slot
     time: "2:00 PM – 3:00 PM"
@@ -64,4 +64,4 @@ items:
 
   - kind: slot
     time: "4:15 PM onward"
-    title: "Socializing, drinks, dinner (on your own)"
+    title: "Socializing, drinks, dinner"
