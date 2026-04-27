@@ -26,7 +26,7 @@ nav_link:
 #     baseurl: "/REPO"
 # For a custom domain, leave both blank.
 url: "https://princetoncomputerarch.github.io"
-baseurl: "/princetoncomputerarch"
+baseurl: ""
 
 # =============================================================================
 # Build settings
