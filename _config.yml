@@ -1,0 +1,44 @@
+# =============================================================================
+# SITE CONFIGURATION
+# =============================================================================
+
+title: "NY Architecture and Systems Day 2026"
+short_name: "NYASD 2026"
+full_name: "NY Architecture and Systems Day 2026"
+description: "NY Architecture and Systems Day at Princeton University on Friday, May 15, 2026. A regional gathering for faculty and students working in computer architecture and systems."
+
+# Brand color drives the headline, section titles, table header, and links.
+# Princeton Orange = #E77500
+brand_color: "#E77500"
+brand_color_hover: "#c96400"
+
+# Optional logo shown in the top-left corner (file goes in /assets/img/).
+# Leave blank to show the short_name as text instead.
+logo: ""
+
+# Optional secondary nav link in the top right. Leave blank to hide.
+nav_link:
+  text: "Princeton CS"
+  url:  "https://www.cs.princeton.edu"
+
+# Site URL. For GitHub Pages at https://USER.github.io/REPO, set:
+#     url: "https://USER.github.io"
+#     baseurl: "/REPO"
+# For a custom domain, leave both blank.
+url: "https://princetoncomputerarch.github.io"
+baseurl: "/princetoncomputerarch"
+
+# =============================================================================
+# Build settings
+# =============================================================================
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - preview.html

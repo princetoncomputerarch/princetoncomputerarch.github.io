@@ -1,0 +1,449 @@
+---
+# Front matter required so Jekyll processes Liquid in this file.
+---
+
+/* ============================================================================
+   THEME — color, type, base layout
+   The brand color comes from _config.yml so changing it once recolors
+   the headline, section headings, links, and table header.
+   ============================================================================ */
+
+:root {
+  --brand:        {{ site.brand_color | default: "#E77500" }};
+  --brand-hover:  {{ site.brand_color_hover | default: "#c96400" }};
+
+  --bg:           #ffffff;
+  --bg-soft:      #f8f8f9;     /* alternating table row */
+  --bg-session:   #fff8df;     /* pale yellow session row */
+  --text:         #1a1a1a;
+  --text-muted:   #555;
+  --text-soft:    #777;
+  --border:       #e6e7eb;
+  --border-soft:  #eef0f3;
+}
+
+html[data-theme="dark"] {
+  --bg:           #0f1115;
+  --bg-soft:      #161922;
+  --bg-session:   #2a2410;
+  --text:         #e8e8ea;
+  --text-muted:   #b3b3b8;
+  --text-soft:    #8a8a93;
+  --border:       #2a2d38;
+  --border-soft:  #1f222b;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background .2s ease, color .2s ease;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a:hover { color: var(--brand-hover); }
+
+del { color: var(--text-soft); }
+
+/* ============================================================================
+   HEADER
+   ============================================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-soft);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { color: var(--brand); text-decoration: none; }
+.brand:hover { color: var(--brand-hover); }
+.brand .brand-text {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+.brand img { height: 28px; width: auto; display: block; }
+
+.nav-right { display: flex; align-items: center; gap: 1.25rem; }
+.nav-right .nav-link {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: .95rem;
+}
+.nav-right .nav-link:hover { color: var(--text); }
+
+.theme-toggle {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.theme-toggle:hover { color: var(--text); background: var(--bg-soft); }
+.theme-toggle .icon-moon { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun  { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+
+/* ============================================================================
+   PAGE COLUMN — left-aligned narrow column
+   ============================================================================ */
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.page p  { margin: 0 0 1rem 0; }
+.page ul { padding-left: 1.4rem; }
+.page li { margin-bottom: .35rem; }
+
+/* ============================================================================
+   HEADINGS — section titles in brand color, bold sans-serif
+   ============================================================================ */
+h2 {
+  color: var(--brand);
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin: 3rem 0 1rem 0;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 1.6rem 0 .75rem 0;
+}
+
+/* ============================================================================
+   HERO
+   ============================================================================ */
+.hero { margin: 2rem 0 1.5rem; }
+
+.hero-big {
+  color: var(--brand);
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.25rem 0;
+}
+
+.hero-sub-top {
+  color: var(--text-soft);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 .25rem 0;
+}
+
+.hero-sub-bottom {
+  color: var(--brand);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem 0;
+}
+
+.held-with { font-size: 1rem; margin: 1rem 0 0 0; }
+
+/* ============================================================================
+   KEY INFO — date / time / location quick-look
+   ============================================================================ */
+.key-info { margin: 1.5rem 0 2rem; }
+.key-info p { margin: 0 0 .15rem 0; line-height: 1.7; }
+
+/* ============================================================================
+   TOPIC LIST (only used when intro.topics is non-empty)
+   ============================================================================ */
+.topic-list { margin: 1rem 0 2rem; }
+
+/* ============================================================================
+   SCHEDULE TABLE — brand-colored header bar, alternating rows,
+   pale-yellow session rows
+   ============================================================================ */
+.schedule-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; }
+
+table.schedule,
+table.students {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
+}
+
+table.schedule thead th,
+table.students thead th {
+  background: var(--brand);
+  color: #fff;
+  text-align: left;
+  font-weight: 700;
+  padding: .85rem 1rem;
+  font-size: 1rem;
+}
+
+table.schedule td,
+table.students td {
+  padding: .9rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+
+/* alternate row striping for slot rows */
+table.schedule tbody tr:nth-child(even):not(.session-row) td,
+table.students tbody tr:nth-child(even) td {
+  background: var(--bg-soft);
+}
+
+/* session header row in pale yellow, centered, bold */
+table.schedule tr.session-row td {
+  background: var(--bg-session);
+  text-align: center;
+  font-weight: 700;
+  padding: .65rem 1rem;
+}
+
+table.schedule .time-cell {
+  white-space: nowrap;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  width: 11rem;
+}
+
+/* tag pills [Keynote], [Paper], etc. */
+.tag { display: inline; font-weight: 700; margin-right: .35rem; }
+.tag-keynote { color: #b45309; }
+.tag-paper   { color: #1d4ed8; }
+.tag-talk    { color: #15803d; }
+.tag-tool    { color: #7e22ce; }
+html[data-theme="dark"] .tag-keynote { color: #fbbf24; }
+html[data-theme="dark"] .tag-paper   { color: #93c5fd; }
+html[data-theme="dark"] .tag-talk    { color: #86efac; }
+html[data-theme="dark"] .tag-tool    { color: #e9d5ff; }
+
+.remote { color: var(--text-soft); font-style: italic; }
+.speaker-line, .authors-line {
+  display: block;
+  margin-top: .25rem;
+  color: var(--text);
+}
+.authors-line { color: var(--text-muted); }
+.pdf-link { display: block; margin-top: .25rem; font-size: .9rem; color: var(--text-soft); }
+.pdf-link a { color: var(--text-soft); }
+.pdf-link a:hover { color: var(--brand); }
+
+/* ============================================================================
+   STUDENT PRESENTATIONS — session sub-headings + presenter table
+   ============================================================================ */
+.student-session-title {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: var(--text);
+}
+.student-chair {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: .95rem;
+}
+
+table.students td:first-child  { font-weight: 600; white-space: nowrap; }
+table.students td:nth-child(2) { color: var(--text-muted); white-space: nowrap; }
+
+/* ============================================================================
+   KEYNOTE / SPEAKER CARDS
+   ============================================================================ */
+.speaker-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  padding: 1.5rem 0 2rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+.speaker-card:last-of-type { border-bottom: 0; }
+
+.speaker-photo img {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+
+.photo-placeholder {
+  width: 200px; height: 240px;
+  background: var(--bg-soft);
+  border: 1px dashed var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-soft); font-size: .85rem;
+}
+.photo-placeholder.square { width: 100%; aspect-ratio: 1 / 1; height: auto; }
+
+.speaker-body p { margin-bottom: .85rem; }
+.speaker-section { margin: 1rem 0; }
+.speaker-section p { margin-bottom: .85rem; }
+
+/* ============================================================================
+   RSVP
+   ============================================================================ */
+.rsvp-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1rem 0 .75rem 0;
+}
+.rsvp-link a {
+  background: var(--brand);
+  color: #fff;
+  padding: .6rem 1.1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+.rsvp-link a:hover {
+  background: var(--brand-hover);
+  color: #fff;
+}
+.rsvp-closed {
+  margin-left: .75rem;
+  color: var(--text-soft);
+  font-weight: 500;
+  font-size: .95rem;
+}
+.rsvp-note {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: .95rem;
+}
+
+/* ============================================================================
+   ORGANIZERS GRID
+   ============================================================================ */
+.organizers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 1.5rem;
+  margin: 1rem 0 1.5rem;
+  border-top: 2px solid var(--brand);
+  border-bottom: 2px solid var(--brand);
+  padding: 1.25rem 0;
+}
+
+.organizer-photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+
+.organizer-name {
+  font-weight: 600;
+  padding-top: .85rem;
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: .35rem;
+  margin-bottom: .35rem;
+}
+.organizer-name a { color: var(--brand); text-decoration: underline; }
+
+.organizer-role,
+.organizer-affil {
+  font-size: .95rem;
+  color: var(--text-muted);
+  padding: .15rem 0;
+}
+.organizer-affil { padding-bottom: .25rem; }
+
+.pc-list { margin: 1rem 0; }
+
+/* ============================================================================
+   LOCATION & DIRECTIONS
+   ============================================================================ */
+.directions-list {
+  list-style: none;
+  padding-left: 0;
+  margin: .5rem 0 1.5rem;
+}
+.directions-list li {
+  padding: .65rem 0;
+  border-bottom: 1px dashed var(--border-soft);
+}
+.directions-list li:last-child { border-bottom: 0; }
+.directions-list li strong { color: var(--text); }
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+.site-footer {
+  border-top: 1px solid var(--border-soft);
+  background: var(--bg-soft);
+  padding: 2.5rem 1.5rem;
+  margin-top: 4rem;
+}
+.footer-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  font-size: .95rem;
+  color: var(--text-muted);
+}
+.footer-col h4 {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 .5rem 0;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 720px) {
+  .hero-big { font-size: 3.5rem; }
+  h2 { font-size: 1.5rem; }
+
+  .speaker-card { grid-template-columns: 1fr; }
+  .speaker-photo img,
+  .photo-placeholder { width: 180px; height: 220px; }
+
+  .organizers-grid { grid-template-columns: 1fr; gap: 1.5rem; padding: 1rem 0; }
+
+  .footer-inner { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  table.students td:first-child,
+  table.students td:nth-child(2) { white-space: normal; }
+}

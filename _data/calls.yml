@@ -1,0 +1,24 @@
+# =============================================================================
+# CALL FOR PAPERS + CALL FOR TOOL RELEASE TALKS
+# =============================================================================
+# Both sections are hidden for NY ASD because this is a community
+# gathering with no submissions. To re-enable either section in the future,
+# flip its `enabled:` to true.
+# =============================================================================
+
+papers:
+  enabled: false           # <-- hidden
+
+  intro: ""
+  dates: []
+  guidelines: []
+  submission_site: ""
+
+tool_talks:
+  enabled: false           # <-- hidden
+
+  title: "Call for Tool Release Talks"
+  intro: []
+  dates: []
+  guidelines: []
+  submission_site: ""

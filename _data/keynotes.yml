@@ -1,0 +1,23 @@
+# =============================================================================
+# KEYNOTE SPEAKERS
+# =============================================================================
+# Put speaker photos in /assets/img/ and reference by filename.
+# Leave `photo:` blank to show a placeholder.
+# `abstract` and `bio` accept multi-paragraph text — separate paragraphs
+# with a blank line, just like Markdown.
+# =============================================================================
+
+heading: "Keynote"
+
+speakers:
+  - name: "TBA"
+    photo: ""
+    title: "To be announced"
+
+    abstract: |
+      The keynote speaker and talk title will be announced closer to the
+      event. Please check back here for updates, or follow the organizers
+      for announcements.
+
+    bio: |
+      Speaker bio to be announced.

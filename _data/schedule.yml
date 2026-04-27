@@ -1,0 +1,67 @@
+# =============================================================================
+# SCHEDULE
+# =============================================================================
+# Each item is one row in the schedule table. Two `kind`s are supported:
+#
+#   kind: session     -> a colored session-header row spanning both columns.
+#                        Only `title` is used.
+#
+#   kind: slot        -> a regular schedule row.
+#       time:         (left column, e.g. "10:30 AM – 11:30 AM")
+#       tag:          optional. one of: keynote | paper | talk | tool
+#                     (rendered as a colored pill before the title)
+#       title:        the talk / event title
+#       speaker:      optional. e.g. "Speaker: TBA" or "Session Chair: TBA"
+#       authors:      optional. e.g. "Author A, Author B (Affiliation)"
+#       remote:       optional bool. shows "[Remote]" after the title
+#       pdf:          optional URL. shows a "[Paper PDF]" link below
+# =============================================================================
+
+heading: "Schedule (Tentative)"
+
+note: >
+  Please feel free to arrive early. A welcome booth and refreshments will be
+  set up before the program begins. Final times and room details will be
+  announced closer to the event.
+
+items:
+  - kind: slot
+    time: "10:00 AM – 10:30 AM"
+    title: "Welcome & Refreshments"
+
+  - kind: slot
+    time: "10:30 AM – 11:30 AM"
+    tag: keynote
+    title: "Keynote Talk"
+    speaker: "Speaker: TBA"
+
+  - kind: slot
+    time: "11:30 AM – 12:30 PM"
+    title: "Student Presentations — Session 1"
+    speaker: "Session Chair: TBA"
+
+  - kind: slot
+    time: "12:30 PM – 2:00 PM"
+    title: "Lunch (on your own — suggestions to be provided)"
+
+  - kind: slot
+    time: "2:00 PM – 3:00 PM"
+    title: "Student Presentations — Session 2"
+    speaker: "Session Chair: TBA"
+
+  - kind: slot
+    time: "3:00 PM – 3:15 PM"
+    title: "Coffee Break"
+
+  - kind: slot
+    time: "3:15 PM – 4:00 PM"
+    title: "Student Presentations — Session 3"
+    speaker: "Session Chair: TBA"
+
+  - kind: slot
+    time: "4:00 PM – 4:15 PM"
+    title: "Closing Remarks"
+
+  - kind: slot
+    time: "4:15 PM onward"
+    title: "Socializing, drinks, dinner (on your own)"

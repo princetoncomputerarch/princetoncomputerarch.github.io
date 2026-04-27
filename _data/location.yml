@@ -1,0 +1,50 @@
+# =============================================================================
+# LOCATION & DIRECTIONS
+# =============================================================================
+# Update once the specific building and room are confirmed.
+# =============================================================================
+
+heading: "Location"
+
+intro: >
+  This event will be held on the Princeton University campus.
+  Specific building and room details will be announced closer to
+  the event.
+
+# Address shown as a stacked block, one line per item.
+address:
+  - "Princeton University"
+  - "Princeton, NJ 08544"
+
+# ---------------------------------------------------------------------------
+# Directions
+# ---------------------------------------------------------------------------
+directions_intro: "Directions:"
+
+directions:
+  - from: "From Newark Airport (EWR)"
+    desc: >
+      Take the AirTrain to Newark Airport Station, then NJ Transit's
+      Northeast Corridor Line to Princeton Junction. Transfer to the
+      Dinky shuttle for one stop to Princeton Station.
+
+  - from: "From JFK Airport"
+    desc: >
+      Take the AirTrain to Jamaica Station, then the LIRR to NY Penn
+      Station, then NJ Transit's Northeast Corridor Line to Princeton
+      Junction, then the Dinky to Princeton Station.
+
+  - from: "From NY Penn Station"
+    desc: >
+      Take NJ Transit's Northeast Corridor Line (Trenton-bound) to
+      Princeton Junction, then the Dinky to Princeton Station.
+
+  - from: "From Philadelphia 30th Street Station"
+    desc: >
+      Take Amtrak (Northeast Regional or Keystone Service) to
+      Princeton Junction, then the Dinky to Princeton Station.
+
+  - from: "By car"
+    desc: >
+      Take Route 1 to the Washington Road exit toward Princeton.
+      Visitor parking is at the Stadium Drive Garage.

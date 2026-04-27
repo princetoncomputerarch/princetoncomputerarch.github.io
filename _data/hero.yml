@@ -1,0 +1,29 @@
+# =============================================================================
+# HERO / KEY INFO — the title block at the top of the page
+# =============================================================================
+
+# The hero has three lines:
+#   big_title       — the giant brand-color headline
+#   subtitle_top    — quiet light-grey serif sub-line
+#   subtitle_bottom — bold brand-color sub-line
+hero:
+  big_title:        "NYASD 2026"
+  subtitle_top:     "NY Architecture and Systems Day"
+  subtitle_bottom:  "Princeton University · May 15, 2026"
+
+# The "held in conjunction with…" line under the hero.
+# For NY ASD this isn't really a sub-event of a larger conference, so we
+# repurpose it as a tagline. Set link_url to "" to render plain text only.
+held_with:
+  prefix:    "Hosted by"
+  link_text: "Princeton University"
+  link_url:  "https://www.princeton.edu"
+
+# Quick-look info shown right under the hero.
+key_info:
+  - label: "Date"
+    value: "Friday, May 15, 2026"
+  - label: "Time"
+    value: "Approx. 10:00 AM – 4:00 PM (Final schedule TBA)"
+  - label: "Location"
+    value: "Princeton University (Specific room details to follow)"

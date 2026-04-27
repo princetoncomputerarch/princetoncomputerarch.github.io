@@ -1,0 +1,40 @@
+# =============================================================================
+# ORGANIZERS — three-up grid of photo, name, (optional role), affiliation
+# =============================================================================
+# Photos are square. Put them in /assets/img/ and reference by filename.
+# Leave `photo:` blank to show a placeholder. Leave `url:` blank if no link.
+# Leave `role:` blank to hide role labels entirely; fill in any one organizer's
+# role and the row of role labels will appear automatically.
+# =============================================================================
+
+heading: "Organizers"
+
+organizers:
+  - name: "TBA"
+    role: ""
+    affiliation: "Princeton University"
+    photo: ""
+    url:   ""
+
+  - name: "TBA"
+    role: ""
+    affiliation: "Princeton University"
+    photo: ""
+    url:   ""
+
+  - name: "TBA"
+    role: ""
+    affiliation: "Princeton University"
+    photo: ""
+    url:   ""
+
+contact_line: "Please contact the organizers if you have any questions."
+
+# =============================================================================
+# PROGRAM COMMITTEE — disabled for this event since there are no submissions
+# =============================================================================
+
+pc:
+  enabled: false           # <-- hidden
+  intro: ""
+  members: []

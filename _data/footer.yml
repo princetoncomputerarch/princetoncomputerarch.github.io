@@ -1,0 +1,19 @@
+# =============================================================================
+# FOOTER — three columns at the bottom of the page
+# =============================================================================
+
+# Column 1 — host / event identity
+lab:
+  name: "NY Architecture and Systems Day 2026"
+  address:
+    - "Princeton University"
+    - "Princeton, NJ 08544"
+
+# Column 2 — primary external link (GitHub repo, mailing list, etc.).
+# Leave the url blank to hide this column.
+github_url: ""
+
+# Column 3 — credits. Add or remove entries freely.
+designers:
+  - name: "Site template inspired by CAMS25"
+    url:  "https://sarchlab.org/cams25"

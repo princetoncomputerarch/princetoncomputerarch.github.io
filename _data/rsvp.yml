@@ -1,0 +1,22 @@
+# =============================================================================
+# RSVP
+# =============================================================================
+# Set `enabled: false` to hide the RSVP section entirely.
+# When the form is closed, set `closed: true` to display "(Closed)" next
+# to the link.
+# =============================================================================
+
+enabled: true
+closed:  false
+
+heading: "RSVP"
+
+intro: >
+  RSVPs help us plan space and refreshments. Please register using the
+  form below if you plan to attend.
+
+form_url:   "https://docs.google.com/forms/d/e/1FAIpQLScGxtTjlarAYzL9o1r2z1hJcOA_rwZs7J3t27hBeBVJVBYlkw/viewform?usp=sharing&ouid=112636053425615447566"
+form_label: "RSVP Form"
+
+# Optional note shown under the link, e.g. "RSVPs close May 1, 2026."
+note: ""

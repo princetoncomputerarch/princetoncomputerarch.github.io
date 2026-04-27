@@ -1,0 +1,35 @@
+# =============================================================================
+# STUDENT PRESENTATIONS — grouped by session
+# =============================================================================
+# Once presenters are confirmed, fill in name / affiliation / title for each
+# row. To add another session, copy a session block. To add another
+# presenter to a session, copy a `- name:` row.
+# =============================================================================
+
+heading: "Student Presentations"
+
+intro: >
+  Confirmed talks will be listed below as they are accepted. Please check
+  back closer to the event for the full lineup.
+
+sessions:
+  - title: "Session 1"
+    chair: "Session Chair: TBA"
+    presenters:
+      - name: "TBA"
+        affiliation: "—"
+        title: "Talks to be announced"
+
+  - title: "Session 2"
+    chair: "Session Chair: TBA"
+    presenters:
+      - name: "TBA"
+        affiliation: "—"
+        title: "Talks to be announced"
+
+  - title: "Session 3"
+    chair: "Session Chair: TBA"
+    presenters:
+      - name: "TBA"
+        affiliation: "—"
+        title: "Talks to be announced"

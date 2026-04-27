@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-col">
+      {% if site.data.footer.lab.name %}
+        <h4>{{ site.data.footer.lab.name }}</h4>
+      {% endif %}
+      {% for line in site.data.footer.lab.address %}
+        {{ line }}<br />
+      {% endfor %}
+    </div>
+
+    {% if site.data.footer.github_url and site.data.footer.github_url != "" %}
+    <div class="footer-col">
+      <h4>GitHub</h4>
+      <a href="{{ site.data.footer.github_url }}">{{ site.data.footer.github_url }}</a>
+    </div>
+    {% endif %}
+
+    {% if site.data.footer.designers and site.data.footer.designers.size > 0 %}
+    <div class="footer-col">
+      <h4>Website Designer</h4>
+      {% for d in site.data.footer.designers %}
+        <a href="{{ d.url }}">{{ d.name }}</a><br />
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</footer>

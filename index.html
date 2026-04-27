@@ -1,0 +1,382 @@
+---
+layout: default
+---
+
+{%- assign hero      = site.data.hero      -%}
+{%- assign intro     = site.data.intro     -%}
+{%- assign calls     = site.data.calls     -%}
+{%- assign schedule  = site.data.schedule  -%}
+{%- assign keynotes  = site.data.keynotes  -%}
+{%- assign students  = site.data.students  -%}
+{%- assign rsvp      = site.data.rsvp      -%}
+{%- assign people    = site.data.people    -%}
+{%- assign location  = site.data.location  -%}
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <h1 class="hero-big">{{ hero.hero.big_title }}</h1>
+  {% if hero.hero.subtitle_top and hero.hero.subtitle_top != "" %}
+    <p class="hero-sub-top">{{ hero.hero.subtitle_top }}</p>
+  {% endif %}
+  {% if hero.hero.subtitle_bottom and hero.hero.subtitle_bottom != "" %}
+    <p class="hero-sub-bottom">{{ hero.hero.subtitle_bottom }}</p>
+  {% endif %}
+
+  {% if hero.held_with %}
+    <p class="held-with">
+      {{ hero.held_with.prefix }}
+      {%- if hero.held_with.link_url and hero.held_with.link_url != "" %}
+        <a href="{{ hero.held_with.link_url }}">{{ hero.held_with.link_text }}</a>
+      {%- else -%}
+        {{ hero.held_with.link_text }}
+      {%- endif -%}.
+    </p>
+  {% endif %}
+</section>
+
+<!-- ============================================================
+     KEY INFO (Date / Time / Location quick-look)
+     ============================================================ -->
+{% if hero.key_info and hero.key_info.size > 0 %}
+<section class="key-info">
+  {% for item in hero.key_info %}
+    <p>
+      <strong>{{ item.label }}:</strong>
+      {% if item.strikethrough and item.strikethrough != "" %}
+        <del>{{ item.strikethrough }}</del>
+      {% endif %}
+      {{ item.value }}
+    </p>
+  {% endfor %}
+</section>
+{% endif %}
+
+<!-- ============================================================
+     SCOPE / INTRO
+     ============================================================ -->
+{% if intro.heading and intro.heading != "" %}
+  <h2>{{ intro.heading }}</h2>
+{% endif %}
+
+{% for p in intro.paragraphs %}
+  <p>{{ p | strip_newlines }}</p>
+{% endfor %}
+
+{% if intro.topics and intro.topics.size > 0 %}
+<ul class="topic-list">
+  {% for t in intro.topics %}
+    <li><strong>{{ t.name }}:</strong> {{ t.desc }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<!-- ============================================================
+     CALL FOR PAPERS  (hidden by default for NY ASD)
+     ============================================================ -->
+{% if calls.papers.enabled %}
+<h2>Call for Papers</h2>
+
+<p>{{ calls.papers.intro | strip_newlines }}</p>
+
+{% for d in calls.papers.dates %}
+  <p>
+    <strong>{{ d.label }}:</strong>
+    {% if d.strikethrough and d.strikethrough != "" %}<del>{{ d.strikethrough }}</del>{% endif %}
+    {{ d.value }}
+  </p>
+{% endfor %}
+
+{% if calls.papers.guidelines and calls.papers.guidelines.size > 0 %}
+  <h3>Submission Guidelines</h3>
+  {% for g in calls.papers.guidelines %}
+    <p>{{ g | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  {% endfor %}
+{% endif %}
+
+{% if calls.papers.submission_site and calls.papers.submission_site != "" %}
+  <p>
+    <strong>Submission Site:</strong>
+    <a href="{{ calls.papers.submission_site }}">{{ calls.papers.submission_site }}</a>
+  </p>
+{% endif %}
+{% endif %}
+
+<!-- ============================================================
+     CALL FOR TOOL RELEASE TALKS  (hidden by default for NY ASD)
+     ============================================================ -->
+{% if calls.tool_talks.enabled %}
+<h2>{{ calls.tool_talks.title }}</h2>
+
+{% for p in calls.tool_talks.intro %}
+  <p>{{ p | strip_newlines }}</p>
+{% endfor %}
+
+{% for d in calls.tool_talks.dates %}
+  <p>
+    <strong>{{ d.label }}:</strong>
+    {% if d.strikethrough and d.strikethrough != "" %}<del>{{ d.strikethrough }}</del>{% endif %}
+    {{ d.value }}
+  </p>
+{% endfor %}
+
+{% if calls.tool_talks.guidelines and calls.tool_talks.guidelines.size > 0 %}
+  <h3>Submission Guidelines</h3>
+  {% for g in calls.tool_talks.guidelines %}
+    <p>{{ g | strip_newlines }}</p>
+  {% endfor %}
+{% endif %}
+
+{% if calls.tool_talks.submission_site and calls.tool_talks.submission_site != "" %}
+  <p>
+    <strong>Submission Site:</strong>
+    <a href="{{ calls.tool_talks.submission_site }}">{{ calls.tool_talks.submission_site }}</a>
+  </p>
+{% endif %}
+{% endif %}
+
+<!-- ============================================================
+     SCHEDULE
+     ============================================================ -->
+{% if schedule.items and schedule.items.size > 0 %}
+<h2>{{ schedule.heading | default: "Schedule" }}</h2>
+
+{% if schedule.note and schedule.note != "" %}
+  <p>{{ schedule.note | strip_newlines }}</p>
+{% endif %}
+
+<div class="schedule-wrap">
+<table class="schedule">
+  <thead>
+    <tr><th>Time</th><th>Event</th></tr>
+  </thead>
+  <tbody>
+  {% for it in schedule.items %}
+    {% if it.kind == "session" %}
+      <tr class="session-row"><td colspan="2">{{ it.title }}</td></tr>
+    {% else %}
+      <tr>
+        <td class="time-cell">{{ it.time }}</td>
+        <td class="event-cell">
+          {% if it.tag and it.tag != "" %}
+            {%- assign tag_label = "" -%}
+            {%- case it.tag -%}
+              {%- when "keynote" -%}{%- assign tag_label = "Keynote" -%}
+              {%- when "paper"   -%}{%- assign tag_label = "Paper" -%}
+              {%- when "talk"    -%}{%- assign tag_label = "Talk" -%}
+              {%- when "tool"    -%}{%- assign tag_label = "Tool Release Talk" -%}
+              {%- else -%}{%- assign tag_label = it.tag -%}
+            {%- endcase -%}
+            <strong class="tag tag-{{ it.tag }}">[{{ tag_label }}]</strong>
+          {% endif %}
+          {{ it.title }}{% if it.remote %} <span class="remote">[Remote]</span>{% endif %}
+          {% if it.speaker and it.speaker != "" %}
+            <span class="speaker-line">{{ it.speaker }}</span>
+          {% endif %}
+          {% if it.authors and it.authors != "" %}
+            <span class="authors-line">{{ it.authors }}</span>
+          {% endif %}
+          {% if it.pdf and it.pdf != "" %}
+            <span class="pdf-link">▶ <a href="{{ it.pdf }}">[Paper PDF]</a></span>
+          {% endif %}
+        </td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+<!-- ============================================================
+     KEYNOTE
+     ============================================================ -->
+{% if keynotes.speakers and keynotes.speakers.size > 0 %}
+<h2>{{ keynotes.heading | default: "Keynote" }}</h2>
+
+{% for s in keynotes.speakers %}
+<div class="speaker-card">
+  <div class="speaker-photo">
+    {% if s.photo and s.photo != "" %}
+      <img src="{{ '/assets/img/' | append: s.photo | relative_url }}" alt="{{ s.name }}" />
+    {% else %}
+      <div class="photo-placeholder">photo</div>
+    {% endif %}
+  </div>
+  <div class="speaker-body">
+    <p><strong>Speaker:</strong> {{ s.name }}</p>
+    {% if s.title and s.title != "" %}<p><strong>Title:</strong> {{ s.title }}</p>{% endif %}
+    {% if s.abstract and s.abstract != "" %}
+      <div class="speaker-section">
+        <strong>Abstract:</strong>
+        {{ s.abstract | markdownify }}
+      </div>
+    {% endif %}
+    {% if s.bio and s.bio != "" %}
+      <div class="speaker-section">
+        <strong>Bio:</strong>
+        {{ s.bio | markdownify }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+<!-- ============================================================
+     STUDENT PRESENTATIONS
+     ============================================================ -->
+{% if students.sessions and students.sessions.size > 0 %}
+<h2>{{ students.heading | default: "Student Presentations" }}</h2>
+
+{% if students.intro and students.intro != "" %}
+  <p>{{ students.intro | strip_newlines }}</p>
+{% endif %}
+
+{% for sess in students.sessions %}
+  <h3 class="student-session-title">
+    {{ sess.title }}{% if sess.chair and sess.chair != "" %} — <span class="student-chair">{{ sess.chair }}</span>{% endif %}
+  </h3>
+
+  {% if sess.presenters and sess.presenters.size > 0 %}
+  <div class="schedule-wrap">
+  <table class="students">
+    <thead>
+      <tr><th>Name</th><th>Affiliation</th><th>Title</th></tr>
+    </thead>
+    <tbody>
+    {% for pr in sess.presenters %}
+      <tr>
+        <td>{{ pr.name }}</td>
+        <td>{{ pr.affiliation }}</td>
+        <td>{{ pr.title }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+<!-- ============================================================
+     RSVP
+     ============================================================ -->
+{% if rsvp.enabled %}
+<h2>{{ rsvp.heading | default: "RSVP" }}</h2>
+
+{% if rsvp.intro and rsvp.intro != "" %}
+  <p>{{ rsvp.intro | strip_newlines }}</p>
+{% endif %}
+
+{% if rsvp.form_url and rsvp.form_url != "" %}
+  <p class="rsvp-link">
+    <a href="{{ rsvp.form_url }}">{{ rsvp.form_label | default: "RSVP Form" }}</a>
+    {% if rsvp.closed %}<span class="rsvp-closed">(Closed)</span>{% endif %}
+  </p>
+{% endif %}
+
+{% if rsvp.note and rsvp.note != "" %}
+  <p class="rsvp-note">{{ rsvp.note }}</p>
+{% endif %}
+{% endif %}
+
+<!-- ============================================================
+     ORGANIZERS
+     ============================================================ -->
+{% if people.organizers and people.organizers.size > 0 %}
+<h2>{{ people.heading | default: "Organizers" }}</h2>
+
+<div class="organizers-grid">
+  {% for o in people.organizers %}
+    <div class="organizer-photo">
+      {% if o.photo and o.photo != "" %}
+        <img src="{{ '/assets/img/' | append: o.photo | relative_url }}" alt="{{ o.name }}" />
+      {% else %}
+        <div class="photo-placeholder square">photo</div>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  {% for o in people.organizers %}
+    <div class="organizer-name">
+      {% if o.url and o.url != "" %}
+        <a href="{{ o.url }}">{{ o.name }}</a>
+      {% else %}
+        {{ o.name }}
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  {% comment %} Role row only renders when at least one organizer has a role filled in. {% endcomment %}
+  {% assign show_roles = false %}
+  {% for o in people.organizers %}
+    {% if o.role and o.role != "" %}{% assign show_roles = true %}{% endif %}
+  {% endfor %}
+  {% if show_roles %}
+    {% for o in people.organizers %}
+      <div class="organizer-role">{{ o.role }}</div>
+    {% endfor %}
+  {% endif %}
+
+  {% for o in people.organizers %}
+    <div class="organizer-affil">{{ o.affiliation }}</div>
+  {% endfor %}
+</div>
+
+{% if people.contact_line and people.contact_line != "" %}
+  <p>{{ people.contact_line }}</p>
+{% endif %}
+{% endif %}
+
+<!-- ============================================================
+     PROGRAM COMMITTEE  (hidden by default for NY ASD)
+     ============================================================ -->
+{% if people.pc.enabled %}
+<h2>Program Committee</h2>
+
+{% if people.pc.intro and people.pc.intro != "" %}
+  <p>{{ people.pc.intro | strip_newlines }}</p>
+{% endif %}
+
+{% if people.pc.members and people.pc.members.size > 0 %}
+<ul class="pc-list">
+  {% for m in people.pc.members %}
+    <li>{{ m }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endif %}
+
+<!-- ============================================================
+     LOCATION & DIRECTIONS
+     ============================================================ -->
+{% if location %}
+<h2>{{ location.heading | default: "Location" }}</h2>
+
+{% if location.intro and location.intro != "" %}
+  <p>{{ location.intro | strip_newlines }}</p>
+{% endif %}
+
+{% if location.address and location.address.size > 0 %}
+<p>
+  <strong>Address:</strong>
+  {%- for line in location.address -%}
+    {%- unless forloop.first %}, {% endunless -%}
+    {{ line }}
+  {%- endfor -%}
+</p>
+{% endif %}
+
+{% if location.directions and location.directions.size > 0 %}
+  {% if location.directions_intro and location.directions_intro != "" %}
+    <p><strong>{{ location.directions_intro }}</strong></p>
+  {% endif %}
+  <ul class="directions-list">
+    {% for d in location.directions %}
+      <li><strong>{{ d.from }}:</strong> {{ d.desc | strip_newlines }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% endif %}
