@@ -28,6 +28,12 @@ nav_link:
 url: "https://princetoncomputerarch.github.io"
 baseurl: ""
 
+# Explicitly disable any inherited Pages theme (Theme Chooser stores
+# `theme:` here; if we don't set it, the legacy build pipeline can
+# inject one — currently injects Slate, which overrides our custom CSS).
+theme: null
+remote_theme: null
+
 # =============================================================================
 # Build settings
 # =============================================================================
