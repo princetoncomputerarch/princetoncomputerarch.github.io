@@ -14,21 +14,18 @@ intro: >
 
 sessions:
   - title: "Session 1"
-    chair: "Session Chair: TBA"
     presenters:
       - name: "TBA"
         affiliation: "—"
         title: "Talks to be announced"
 
   - title: "Session 2"
-    chair: "Session Chair: TBA"
     presenters:
       - name: "TBA"
         affiliation: "—"
         title: "Talks to be announced"
 
   - title: "Session 3"
-    chair: "Session Chair: TBA"
     presenters:
       - name: "TBA"
         affiliation: "—"
