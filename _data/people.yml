@@ -10,23 +10,10 @@
 heading: "Organizers"
 
 organizers:
-  - name: "TBA"
-    role: ""
+  - name: "Sneha Goenka"
+    role: "Assistant Professor; Lead, Cluster of Excellence in Architecture and Systems"
     affiliation: "Princeton University"
-    photo: ""
-    url:   ""
 
-  - name: "TBA"
-    role: ""
-    affiliation: "Princeton University"
-    photo: ""
-    url:   ""
-
-  - name: "TBA"
-    role: ""
-    affiliation: "Princeton University"
-    photo: ""
-    url:   ""
 
 contact_line: "Please contact the organizers if you have any questions."
 
