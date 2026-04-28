@@ -288,6 +288,33 @@ layout: default
 {% if people.organizers and people.organizers.size > 0 %}
 <h2>{{ people.heading | default: "Organizers" }}</h2>
 
+{% if people.organizers.size == 1 %}
+  {% assign o = people.organizers[0] %}
+  <div class="organizer-card">
+    <div class="organizer-card-photo">
+      {% if o.photo and o.photo != "" %}
+        <img src="{{ '/assets/img/' | append: o.photo | relative_url }}" alt="{{ o.name }}" />
+      {% else %}
+        <div class="photo-placeholder square">photo</div>
+      {% endif %}
+    </div>
+    <div class="organizer-card-body">
+      <p class="organizer-card-name">
+        {% if o.url and o.url != "" %}
+          <a href="{{ o.url }}">{{ o.name }}</a>
+        {% else %}
+          {{ o.name }}
+        {% endif %}
+      </p>
+      {% if o.role and o.role != "" %}
+        <p class="organizer-card-role">{{ o.role }}</p>
+      {% endif %}
+      {% if o.affiliation and o.affiliation != "" %}
+        <p class="organizer-card-affil">{{ o.affiliation }}</p>
+      {% endif %}
+    </div>
+  </div>
+{% else %}
 <div class="organizers-grid" style="grid-template-columns: repeat({{ people.organizers.size }}, minmax(0, 1fr));">
   {% for o in people.organizers %}
     <div class="organizer-photo">
@@ -324,6 +351,7 @@ layout: default
     <div class="organizer-affil">{{ o.affiliation }}</div>
   {% endfor %}
 </div>
+{% endif %}
 
 {% if people.contact_line and people.contact_line != "" %}
   <p>{{ people.contact_line }}</p>

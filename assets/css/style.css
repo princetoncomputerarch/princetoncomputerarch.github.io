@@ -361,6 +361,40 @@ table.students td:nth-child(2) { color: var(--text-muted); white-space: nowrap; 
   padding: 1.25rem 0;
 }
 
+/* Single-organizer card layout: photo on the left, info on the right. */
+.organizer-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  margin: 1rem 0 1.5rem;
+  border-top: 2px solid var(--brand);
+  border-bottom: 2px solid var(--brand);
+  padding: 1.5rem 0;
+}
+.organizer-card-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+.organizer-card-photo .photo-placeholder.square {
+  width: 200px; height: 200px; aspect-ratio: auto;
+}
+.organizer-card-body p { margin: 0 0 .35rem; }
+.organizer-card-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.organizer-card-name a { color: var(--brand); text-decoration: underline; }
+.organizer-card-role,
+.organizer-card-affil {
+  font-size: .95rem;
+  color: var(--text-muted);
+}
+
 .organizer-photo {
   max-width: 220px;
 }
@@ -444,6 +478,10 @@ table.students td:nth-child(2) { color: var(--text-muted); white-space: nowrap; 
   .photo-placeholder { width: 180px; height: 220px; }
 
   .organizers-grid { grid-template-columns: 1fr; gap: 1.5rem; padding: 1rem 0; }
+
+  .organizer-card { grid-template-columns: 1fr; gap: 1rem; }
+  .organizer-card-photo img,
+  .organizer-card-photo .photo-placeholder.square { width: 180px; height: 180px; }
 
   .footer-inner { grid-template-columns: 1fr; gap: 1.25rem; }
 
