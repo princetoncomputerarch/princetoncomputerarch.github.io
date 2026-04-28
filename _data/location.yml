@@ -7,14 +7,9 @@
 heading: "Location"
 
 intro: >
-  This event will be held on the Princeton University campus.
-  Specific building and room details will be announced closer to
-  the event.
+  This event will be held in Briger Hall, Room D301, on the Princeton University campus.
+  Briger is one of the newest buildings on campus, but up-to-date campus maps include it.
 
-# Address shown as a stacked block, one line per item.
-address:
-  - "Princeton University"
-  - "Princeton, NJ 08544"
 
 # ---------------------------------------------------------------------------
 # Directions
@@ -27,12 +22,6 @@ directions:
       Take the AirTrain to Newark Airport Station, then NJ Transit's
       Northeast Corridor Line to Princeton Junction. Transfer to the
       Dinky shuttle for one stop to Princeton Station.
-
-  - from: "From JFK Airport"
-    desc: >
-      Take the AirTrain to Jamaica Station, then the LIRR to NY Penn
-      Station, then NJ Transit's Northeast Corridor Line to Princeton
-      Junction, then the Dinky to Princeton Station.
 
   - from: "From NY Penn Station"
     desc: >
