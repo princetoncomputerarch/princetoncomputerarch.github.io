@@ -26,17 +26,17 @@ note: >
 
 items:
   - kind: slot
-    time: "10:00 AM – 10:30 AM"
+    time: "9:00 AM – 10:00 AM"
     title: "Welcome & Refreshments"
 
   - kind: slot
-    time: "10:30 AM – 11:30 AM"
+    time: "10:00 AM – 11:00 AM"
     tag: keynote
     title: "Keynote Talk"
-    speaker: "Speaker: TBA"
+    speaker: "Speaker: Vijayalakshmi Srinivasan, Distinguished Research Engineer. IBM"
 
   - kind: slot
-    time: "11:30 AM – 12:30 PM"
+    time: "11:00 AM – 12:30 PM"
     title: "Student Presentations — Session 1"
 
   - kind: slot
@@ -48,17 +48,11 @@ items:
     title: "Student Presentations — Session 2"
 
   - kind: slot
-    time: "3:00 PM – 3:15 PM"
-    title: "Coffee Break"
+    time: "3:00 PM – 4:30 PM"
+    title: "Poster Session with Drinks and Snacks and Networking"
 
   - kind: slot
-    time: "3:15 PM – 4:00 PM"
-    title: "Student Presentations — Session 3"
-
-  - kind: slot
-    time: "4:00 PM – 4:15 PM"
+    time: "4:30 PM – 4:45 PM"
     title: "Closing Remarks"
 
-  - kind: slot
-    time: "4:15 PM onward"
-    title: "Socializing, drinks, dinner"
+
