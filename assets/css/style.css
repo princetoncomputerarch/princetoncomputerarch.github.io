@@ -361,6 +361,9 @@ table.students td:nth-child(2) { color: var(--text-muted); white-space: nowrap; 
   padding: 1.25rem 0;
 }
 
+.organizer-photo {
+  max-width: 220px;
+}
 .organizer-photo img {
   width: 100%;
   aspect-ratio: 1 / 1;

@@ -288,7 +288,7 @@ layout: default
 {% if people.organizers and people.organizers.size > 0 %}
 <h2>{{ people.heading | default: "Organizers" }}</h2>
 
-<div class="organizers-grid">
+<div class="organizers-grid" style="grid-template-columns: repeat({{ people.organizers.size }}, minmax(0, 1fr));">
   {% for o in people.organizers %}
     <div class="organizer-photo">
       {% if o.photo and o.photo != "" %}
