@@ -36,20 +36,20 @@ items:
     speaker: "Speaker: Vijayalakshmi Srinivasan, Distinguished Research Engineer. IBM"
 
   - kind: slot
-    time: "11:00 AM – 12:30 PM"
+    time: "11:00 AM – 12:00 PM"
     title: "Student Presentations — Session 1"
 
   - kind: slot
-    time: "12:30 PM – 2:00 PM"
+    time: "12:00 PM – 1:30 PM"
     title: "Lunch"
 
   - kind: slot
-    time: "2:00 PM – 3:00 PM"
+    time: "1:30 PM – 3:00 PM"
     title: "Student Presentations — Session 2"
 
   - kind: slot
     time: "3:00 PM – 4:30 PM"
-    title: "Poster Session with Drinks and Snacks and Networking"
+    title: "Poster Session with Drinks, Snacks and Networking"
 
   - kind: slot
     time: "4:30 PM – 4:45 PM"
