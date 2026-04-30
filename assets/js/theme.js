@@ -1,30 +1,6 @@
 (function () {
-  const KEY = 'theme-mode';
-  const root = document.documentElement;
-  const btn = document.getElementById('theme-toggle');
-
-  function apply(mode) {
-    if (mode === 'dark') {
-      root.setAttribute('data-theme', 'dark');
-    } else {
-      root.removeAttribute('data-theme');
-    }
-  }
-
-  // On load: stored choice wins; otherwise follow system.
-  const stored = localStorage.getItem(KEY);
-  if (stored === 'dark' || stored === 'light') {
-    apply(stored);
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    apply('dark');
-  }
-
-  if (btn) {
-    btn.addEventListener('click', () => {
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      const next = isDark ? 'light' : 'dark';
-      apply(next);
-      localStorage.setItem(KEY, next);
-    });
-  }
+  // Light theme only. Clear any previously-saved dark preference so users
+  // who toggled dark before the toggle was removed are forced back to light.
+  document.documentElement.removeAttribute('data-theme');
+  try { localStorage.removeItem('theme-mode'); } catch (e) {}
 })();
