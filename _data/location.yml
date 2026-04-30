@@ -32,7 +32,7 @@ parking:
   intro: "Free daily parking permits for the Princeton University Stadium Drive Garage are required for visitors on weekdays from 7 AM to 4 PM. Registration is done online or by scanning a QR code at the garage. Permits are free of charge, but visitors must register their vehicle license plate."
   required_heading: "Parking Permit Required:"
   lines:
-    - "Online: Click here to complete the online registration form to register your vehicle."
+    - 'Online: <a href="https://vpermit.com/princeton/ClaimableEvents/Claim?code=VISITOR%20PARKING" target="_blank" rel="noopener">Click here</a> to complete the online registration form to register your vehicle.'
     - "On-Site: Upon arrival at the Stadium Drive Garage, push the button at the gate to receive a ticket and scan the QR code on the ticket to complete the registration form before leaving your vehicle."
 
 # ---------------------------------------------------------------------------
