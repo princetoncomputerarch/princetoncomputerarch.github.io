@@ -1,15 +1,6 @@
 <footer class="site-footer">
   <div class="footer-inner">
 
-    <div class="footer-col">
-      {% if site.data.footer.lab.name %}
-        <h4>{{ site.data.footer.lab.name }}</h4>
-      {% endif %}
-      {% for line in site.data.footer.lab.address %}
-        {{ line }}<br />
-      {% endfor %}
-    </div>
-
     {% if site.data.footer.host %}
     <div class="footer-col footer-host">
       {% if site.data.footer.host.heading %}
@@ -25,6 +16,15 @@
       {% endfor %}
     </div>
     {% endif %}
+
+    <div class="footer-col">
+      {% if site.data.footer.lab.name %}
+        <h4>{{ site.data.footer.lab.name }}</h4>
+      {% endif %}
+      {% for line in site.data.footer.lab.address %}
+        {{ line }}<br />
+      {% endfor %}
+    </div>
 
     {% if site.data.footer.github_url and site.data.footer.github_url != "" %}
     <div class="footer-col">
