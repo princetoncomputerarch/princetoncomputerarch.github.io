@@ -404,7 +404,7 @@ layout: default
   <ul class="directions-list">
     {% if location.gps.address %}
       <li>
-        {% if location.gps.address_label %}{{ location.gps.address_label }} {% endif %}
+        {% if location.gps.address_label %}<strong>{{ location.gps.address_label }}</strong> {% endif %}
         {% if location.gps.address_url and location.gps.address_url != "" %}
           <a href="{{ location.gps.address_url }}" target="_blank" rel="noopener">{{ location.gps.address }}</a>
         {% else %}
