@@ -16,7 +16,6 @@ host:
   logo_alt: "Cluster of Excellence in Architecture and Systems logo"
   names:
     - "Cluster of Excellence in Architecture and Systems"
-    - "Princeton ECE"
 
 # Optional GitHub link column. Leave blank to hide.
 github_url: ""
