@@ -397,11 +397,21 @@ layout: default
 </p>
 {% endif %}
 
-{% if location.gps and location.gps.lines and location.gps.lines.size > 0 %}
+{% if location.gps %}
   {% if location.gps.heading and location.gps.heading != "" %}
     <p><strong>{{ location.gps.heading }}</strong></p>
   {% endif %}
   <ul class="directions-list">
+    {% if location.gps.address %}
+      <li>
+        {% if location.gps.address_label %}{{ location.gps.address_label }} {% endif %}
+        {% if location.gps.address_url and location.gps.address_url != "" %}
+          <a href="{{ location.gps.address_url }}" target="_blank" rel="noopener">{{ location.gps.address }}</a>
+        {% else %}
+          {{ location.gps.address }}
+        {% endif %}
+      </li>
+    {% endif %}
     {% for line in location.gps.lines %}
       <li>{{ line }}</li>
     {% endfor %}

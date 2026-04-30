@@ -14,8 +14,10 @@ intro: >
 # ---------------------------------------------------------------------------
 gps:
   heading: "GPS Address and Walking Directions"
+  address_label: "GPS Address for The Commons:"
+  address: "11 Ivy Lane, Princeton, NJ"
+  address_url: "https://www.google.com/maps/search/?api=1&query=11+Ivy+Lane%2C+Princeton%2C+NJ"
   lines:
-    - "GPS Address for The Commons: 11 Ivy Lane, Princeton, NJ"
     - "The Commons is located directly in front of Tiger Stadium."
     - "Entry Instructions: Use the entrance across from the metal tiger sculpture at the football stadium."
     - "Take elevator #4 to 3rd floor"
