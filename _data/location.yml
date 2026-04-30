@@ -44,17 +44,17 @@ directions:
       Northeast Corridor Line to Princeton Junction. Transfer to the
       Dinky shuttle for one stop to Princeton Station.
 
-  - from: "From NY Penn Station:"
+  - from: "From NY Penn Station"
     desc: >
       Take NJ Transit's Northeast Corridor Line (Trenton-bound) to
       Princeton Junction, then the Dinky to Princeton Station.
 
-  - from: "From Philadelphia 30th Street Station:"
+  - from: "From Philadelphia 30th Street Station"
     desc: >
       Take Amtrak (Northeast Regional or Keystone Service) to
       Princeton Junction, then the Dinky to Princeton Station.
 
-  - from: "By car:"
+  - from: "By car"
     desc: >
       Take Route 1 to the Harrison Street exit toward Princeton.
       Turn left onto Faculty Road. Turn right onto Sweetgum Dr.,
