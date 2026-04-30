@@ -10,30 +10,39 @@ intro: >
   This event will be held in Briger Hall, Room D301, on the Princeton University campus.
   Briger is one of the newest buildings on campus, but up-to-date campus maps include it.
 
-
 # ---------------------------------------------------------------------------
 # Directions
 # ---------------------------------------------------------------------------
-directions_intro: "Directions:"
+
+directions_intro: GPS Address and Walking Directions
+GPS Address for The Commons: 11 Ivy Lane, Princeton, NJ
+The Commons is located directly in front of Tiger Stadium.
+Entry Instructions: Use the entrance across from the metal tiger sculpture at the football stadium.
+Take elevator #4 to 3rd floor
+D301 will be straight ahead
+ 
+directions_intro: Parking
+Free daily parking permits for the Princeton University Stadium Drive Garage are required for visitors on weekdays from 7 AM to 4 PM. Registration is done online or by scanning a QR code at the garage. Permits are free of charge, but visitors must register their vehicle license plate.
+Parking Permit Required:
+Online: Click here to complete the online registration form to register your vehicle.
+On-Site: Upon arrival at the Stadium Drive Garage, push the button at the gate to receive a ticket and scan the QR code on the ticket to complete the registration form before leaving your vehicle.
+
+directions_intro: Driving Directions:
 
 directions:
-  - from: "From Newark Airport (EWR)"
-    desc: >
-      Take the AirTrain to Newark Airport Station, then NJ Transit's
-      Northeast Corridor Line to Princeton Junction. Transfer to the
-      Dinky shuttle for one stop to Princeton Station.
+- from: "From Newark Airport (EWR)"
+desc: > Take the AirTrain to Newark Airport Station, then NJ Transit's Northeast Corridor Line to Princeton Junction. Transfer to the Dinky shuttle for one stop to Princeton Station.
 
-  - from: "From NY Penn Station"
-    desc: >
-      Take NJ Transit's Northeast Corridor Line (Trenton-bound) to
-      Princeton Junction, then the Dinky to Princeton Station.
+- from: "From NY Penn Station:"
+desc: > 
+Take NJ Transit's Northeast Corridor Line (Trenton-bound) to Princeton Junction, then the Dinky to Princeton Station.
 
-  - from: "From Philadelphia 30th Street Station"
-    desc: >
-      Take Amtrak (Northeast Regional or Keystone Service) to
-      Princeton Junction, then the Dinky to Princeton Station.
+-from: "From Philadelphia 30th Street Station:"
+desc: > 
+Take Amtrak (Northeast Regional or Keystone Service) to Princeton Junction, then the Dinky to Princeton Station.
 
-  - from: "By car"
-    desc: >
-      Take Route 1 to the Washington Road exit toward Princeton.
-      Visitor parking is at the Stadium Drive Garage.
+- from: "By car:" Take Route 1 to the Harrison Street exit toward Princeton. Turn left onto Faculty Road. Turn right onto Sweetgum Dr., and make the first right turn to Stadium Garage.
+
+The Commons is a short walk from Stadium Garage, at the intersection of Stadium Drive and Ivy Lane.
+
+Interactive Campus Map: Online: https://campusmap.princeton.edu/ Get the App for Apple or Android
