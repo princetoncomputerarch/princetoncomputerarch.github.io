@@ -37,7 +37,7 @@ parking:
 # ---------------------------------------------------------------------------
 # Driving Directions
 # ---------------------------------------------------------------------------
-directions_intro: "Getting Here:"
+directions_intro: "Directions:"
 
 directions:
   - from: "From Newark Airport (EWR)"
