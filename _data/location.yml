@@ -7,8 +7,7 @@
 heading: "Location"
 
 intro: >
-  This event will be held in Briger Hall, Room D301, on the Princeton University campus.
-  Briger is one of the newest buildings on campus, but up-to-date campus maps include it.
+  This event will be held in The Commons, Room D301, on the Princeton University campus.
 
 # ---------------------------------------------------------------------------
 # GPS Address & Walking Directions
@@ -65,6 +64,9 @@ closing: >
   The Commons is a short walk from Stadium Garage, at the intersection of Stadium Drive and Ivy Lane.
 
 # ---------------------------------------------------------------------------
-# Campus map (single line, exact original wording)
+# Campus map
 # ---------------------------------------------------------------------------
-campus_map: "Interactive Campus Map: Online: https://campusmap.princeton.edu/ Get the App for Apple or Android"
+campus_map:
+  prefix: "Interactive Campus Map: Online:"
+  url: "https://campusmap.princeton.edu/"
+  suffix: "Get the App for Apple or Android"

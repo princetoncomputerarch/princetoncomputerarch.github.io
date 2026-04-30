@@ -442,7 +442,7 @@ layout: default
   <p>{{ location.closing | strip_newlines }}</p>
 {% endif %}
 
-{% if location.campus_map and location.campus_map != "" %}
-  <p>{{ location.campus_map }}</p>
+{% if location.campus_map and location.campus_map.url and location.campus_map.url != "" %}
+  <p>{{ location.campus_map.prefix }} <a href="{{ location.campus_map.url }}" target="_blank" rel="noopener">{{ location.campus_map.url }}</a> {{ location.campus_map.suffix }}</p>
 {% endif %}
 {% endif %}
