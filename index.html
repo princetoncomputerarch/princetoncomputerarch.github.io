@@ -408,15 +408,23 @@ layout: default
   </ul>
 {% endif %}
 
-{% if location.parking and location.parking.lines and location.parking.lines.size > 0 %}
+{% if location.parking %}
   {% if location.parking.heading and location.parking.heading != "" %}
     <p><strong>{{ location.parking.heading }}</strong></p>
   {% endif %}
+  {% if location.parking.intro and location.parking.intro != "" %}
+    <p>{{ location.parking.intro }}</p>
+  {% endif %}
+  {% if location.parking.required_heading and location.parking.required_heading != "" %}
+    <p><strong>{{ location.parking.required_heading }}</strong></p>
+  {% endif %}
+  {% if location.parking.lines and location.parking.lines.size > 0 %}
   <ul class="directions-list">
     {% for line in location.parking.lines %}
       <li>{{ line }}</li>
     {% endfor %}
   </ul>
+  {% endif %}
 {% endif %}
 
 {% if location.directions and location.directions.size > 0 %}
@@ -434,9 +442,7 @@ layout: default
   <p>{{ location.closing | strip_newlines }}</p>
 {% endif %}
 
-{% if location.campus_map and location.campus_map.url and location.campus_map.url != "" %}
-  <p><strong>{{ location.campus_map.label | default: "Interactive Campus Map" }}:</strong>
-    <a href="{{ location.campus_map.url }}" target="_blank" rel="noopener">{{ location.campus_map.url }}</a>
-  </p>
+{% if location.campus_map and location.campus_map != "" %}
+  <p>{{ location.campus_map }}</p>
 {% endif %}
 {% endif %}
