@@ -11,7 +11,19 @@
     <nav class="nav-right">
       {% if site.nav_links and site.nav_links.size > 0 %}
         {% for n in site.nav_links %}
-          {% if n.url and n.url != "" %}
+          {% if n.links and n.links.size > 0 %}
+            <span class="nav-link nav-group">
+              {%- if n.prefix and n.prefix != "" %}{{ n.prefix }} {% endif -%}
+              {%- for sub in n.links -%}
+                {%- if forloop.index0 > 0 %} {{ n.separator | default: "&" }} {% endif -%}
+                {%- if sub.url and sub.url != "" -%}
+                  <a href="{{ sub.url }}">{{ sub.text }}</a>
+                {%- else -%}
+                  {{ sub.text }}
+                {%- endif -%}
+              {%- endfor -%}
+            </span>
+          {% elsif n.url and n.url != "" %}
             <a class="nav-link" href="{{ n.url }}">{{ n.text }}</a>
           {% endif %}
         {% endfor %}

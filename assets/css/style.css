@@ -91,6 +91,18 @@ del { color: var(--text-soft); }
 }
 .nav-right .nav-link:hover { color: var(--text); }
 
+/* Grouped nav: prefix + linked sub-items joined by a separator (e.g. "Princeton CS & ECE") */
+.nav-right .nav-group {
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-right .nav-group a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.nav-right .nav-group a:hover { color: var(--text); }
+
 .theme-toggle {
   appearance: none;
   background: transparent;
