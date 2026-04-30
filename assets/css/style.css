@@ -465,6 +465,13 @@ table.students td:nth-child(2) { color: var(--text-muted); white-space: nowrap; 
   font-weight: 700;
   margin: 0 0 .5rem 0;
 }
+.footer-logo {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 0 .6rem 0;
+}
 
 /* ============================================================================
    RESPONSIVE

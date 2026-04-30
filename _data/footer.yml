@@ -9,8 +9,16 @@ lab:
     - "Princeton University"
     - "Princeton, NJ 08544"
 
-# Column 2 — primary external link (GitHub repo, mailing list, etc.).
-# Leave the url blank to hide this column.
+# Column 2 — host / sponsor logo + names.
+host:
+  heading: "Hosted by"
+  logo: "efcas_logo.png"
+  logo_alt: "Cluster of Excellence in Architecture and Systems logo"
+  names:
+    - "Cluster of Excellence in Architecture and Systems"
+    - "Princeton ECE"
+
+# Optional GitHub link column. Leave blank to hide.
 github_url: ""
 
 # Column 3 — credits. Add or remove entries freely.

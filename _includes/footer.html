@@ -10,6 +10,22 @@
       {% endfor %}
     </div>
 
+    {% if site.data.footer.host %}
+    <div class="footer-col footer-host">
+      {% if site.data.footer.host.heading %}
+        <h4>{{ site.data.footer.host.heading }}</h4>
+      {% endif %}
+      {% if site.data.footer.host.logo %}
+        <img class="footer-logo"
+             src="{{ '/assets/img/' | append: site.data.footer.host.logo | relative_url }}"
+             alt="{{ site.data.footer.host.logo_alt | default: '' }}" />
+      {% endif %}
+      {% for n in site.data.footer.host.names %}
+        {{ n }}<br />
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {% if site.data.footer.github_url and site.data.footer.github_url != "" %}
     <div class="footer-col">
       <h4>GitHub</h4>

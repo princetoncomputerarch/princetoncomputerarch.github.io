@@ -11,6 +11,12 @@ hero:
   subtitle_top:     "NY Architecture and Systems Day"
   subtitle_bottom:  "Princeton University · May 15, 2026"
 
+# Optional "Hosted by" line shown under the hero.
+held_with:
+  prefix: "Hosted by the"
+  link_text: "Cluster of Excellence in Architecture and Systems, Princeton ECE"
+  link_url: ""
+
 # Quick-look info shown right under the hero.
 key_info:
   - label: "Date"
