@@ -16,10 +16,13 @@ brand_color_hover: "#c96400"
 # Leave blank to show the short_name as text instead.
 logo: ""
 
-# Optional secondary nav link in the top right. Leave blank to hide.
-nav_link:
-  text: "Princeton CS"
-  url:  "https://www.cs.princeton.edu"
+# Optional nav links in the top right. Add or remove as needed; leave the
+# list empty to hide all secondary nav links.
+nav_links:
+  - text: "Princeton CS"
+    url:  "https://www.cs.princeton.edu"
+  - text: "Princeton ECE"
+    url:  "https://ece.princeton.edu"
 
 # Site URL. For GitHub Pages at https://USER.github.io/REPO, set:
 #     url: "https://USER.github.io"
