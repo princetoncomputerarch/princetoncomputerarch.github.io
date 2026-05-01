@@ -19,11 +19,6 @@
 
 heading: "Schedule (Tentative)"
 
-note: >
-  Please feel free to arrive early. A welcome booth and refreshments will be
-  set up before the program begins. Final times and room details will be
-  announced closer to the event.
-
 items:
   - kind: slot
     time: "9:00 AM – 10:00 AM"
