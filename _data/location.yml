@@ -11,36 +11,20 @@ intro: >
   The Commons is one of the newest buildings on campus, but up-to-date campus maps include it.
 
 # ---------------------------------------------------------------------------
-# GPS Address & Walking Directions
-# ---------------------------------------------------------------------------
-gps:
-  heading: "GPS Address and Walking Directions"
-  address_label: "GPS Address for The Commons:"
-  address: "11 Ivy Lane, Princeton, NJ"
-  address_url: "https://www.google.com/maps/search/?api=1&query=11+Ivy+Lane%2C+Princeton%2C+NJ"
-  lines:
-    - "The Commons is located directly in front of Tiger Stadium."
-    - "Entry Instructions: Use the entrance across from the metal tiger sculpture at the football stadium."
-    - "Take elevator #4 to 3rd floor"
-    - "D301 will be straight ahead"
-
-# ---------------------------------------------------------------------------
-# Parking
-# ---------------------------------------------------------------------------
-parking:
-  heading: "Parking"
-  intro: "Free daily parking permits for the Princeton University Stadium Drive Garage are required for visitors on weekdays from 7 AM to 4 PM. Registration is done online or by scanning a QR code at the garage. Permits are free of charge, but visitors must register their vehicle license plate."
-  required_heading: "Parking Permit Required:"
-  lines:
-    - 'Online: <a href="https://vpermit.com/princeton/ClaimableEvents/Claim?code=VISITOR%20PARKING" target="_blank" rel="noopener">Click here</a> to complete the online registration form to register your vehicle.'
-    - "On-Site: Upon arrival at the Stadium Drive Garage, push the button at the gate to receive a ticket and scan the QR code on the ticket to complete the registration form before leaving your vehicle."
-
-# ---------------------------------------------------------------------------
 # Driving Directions
 # ---------------------------------------------------------------------------
 directions_intro: "Directions:"
 
 directions:
+  heading: "GPS Address"
+  address: "11 Ivy Lane, Princeton, NJ"
+  address_url: "https://www.google.com/maps/search/?api=1&query=11+Ivy+Lane%2C+Princeton%2C+NJ"
+  lines:
+    - "The Commons is located directly in front of Tiger Stadium. It is a short walk from Stadium Garage, at the intersection of Stadium Drive and Ivy Lane."
+    - "Entry Instructions: Use the entrance across from the metal tiger sculpture at the football stadium."
+    - "Take elevator #4 to 3rd floor"
+    - "D301 will be straight ahead"
+    
   - from: "From Newark Airport (EWR)"
     desc: >
       Take the AirTrain to Newark Airport Station, then NJ Transit's
@@ -62,14 +46,22 @@ directions:
       Take Route 1 to the Harrison Street exit toward Princeton.
       Turn left onto Faculty Road. Turn right onto Sweetgum Dr.,
       and make the first right turn to Stadium Garage.
-
-closing: >
-  The Commons is a short walk from Stadium Garage, at the intersection of Stadium Drive and Ivy Lane.
+    
+# ---------------------------------------------------------------------------
+# Parking
+# ---------------------------------------------------------------------------
+parking:
+  heading: "Parking"
+  intro: "Free daily parking permits for the Princeton University Stadium Drive Garage are required for visitors on weekdays from 7 AM to 4 PM. Registration is done online or by scanning a QR code at the garage. Permits are free of charge, but visitors must register their vehicle license plate."
+  required_heading: "Parking Permit Required:"
+  lines:
+    - 'Online: <a href="https://vpermit.com/princeton/ClaimableEvents/Claim?code=VISITOR%20PARKING" target="_blank" rel="noopener">Click here</a> to complete the online registration form to register your vehicle.'
+    - "On-Site: Upon arrival at the Stadium Drive Garage, push the button at the gate to receive a ticket and scan the QR code on the ticket to complete the registration form before leaving your vehicle."
 
 # ---------------------------------------------------------------------------
 # Campus map
 # ---------------------------------------------------------------------------
 campus_map:
-  prefix: "Interactive Campus Map: Online:"
+  prefix: "Interactive Campus Map:"
   url: "https://campusmap.princeton.edu/"
-  suffix: "Get the App for Apple or Android"
+  suffix: ""
