@@ -8,29 +8,24 @@
       {% endif %}
     </a>
 
-    <nav class="nav-right">
-      {% if site.nav_links and site.nav_links.size > 0 %}
-        {% for n in site.nav_links %}
-          {% if n.links and n.links.size > 0 %}
-            <span class="nav-link nav-group">
-              {%- if n.prefix and n.prefix != "" %}{{ n.prefix }} {% endif -%}
-              {%- for sub in n.links -%}
-                {%- if forloop.index0 > 0 %} {{ n.separator | default: "&" }} {% endif -%}
-                {%- if sub.url and sub.url != "" -%}
-                  <a href="{{ sub.url }}">{{ sub.text }}</a>
-                {%- else -%}
-                  {{ sub.text }}
-                {%- endif -%}
-              {%- endfor -%}
-            </span>
-          {% elsif n.url and n.url != "" %}
-            <a class="nav-link" href="{{ n.url }}">{{ n.text }}</a>
-          {% endif %}
-        {% endfor %}
-      {% elsif site.nav_link and site.nav_link.url and site.nav_link.url != "" %}
-        <a class="nav-link" href="{{ site.nav_link.url }}">{{ site.nav_link.text }}</a>
-      {% endif %}
+<div class="nav-right">
+  <a href="#schedule" class="nav-link">
+    {{ site.data.schedule.heading | default: "Schedule" }}
+  </a>
 
-    </nav>
+  <a href="#keynote" class="nav-link">
+    {{ site.data.keynotes.heading | default: "Keynote" }}
+  </a>
+
+  <a href="#location" class="nav-link">
+    {{ site.data.location.heading | default: "Location" }}
+  </a>
+
+  {% if site.data.rsvp.enabled %}
+    <a href="{{ site.data.rsvp.form_url }}" class="nav-link">
+      {{ site.data.rsvp.form_label | default: "RSVP" }}
+    </a>
+  {% endif %}
+</div>
   </div>
 </header>
