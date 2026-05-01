@@ -10,22 +10,24 @@ intro: >
   This event will be held in The Commons, Room D301, on the Princeton University campus.
   The Commons is one of the newest buildings on campus, but up-to-date campus maps include it.
 
+# ---------------------------------------------------------------------------
+# GPS / ENTRY INFO (Added the 'gps:' key here)
+# ---------------------------------------------------------------------------
 gps:
-  heading: "Address and Access"
+  heading: "GPS Address"
   address: "11 Ivy Lane, Princeton, NJ"
   address_url: "https://www.google.com/maps/search/?api=1&query=11+Ivy+Lane+Princeton+NJ"
-  # Use the > symbol to create a single paragraph
   lines:
-    - >
-      The Commons is located directly in front of Tiger Stadium, a short walk from Stadium Garage. 
-      To enter, use the entrance across from the metal tiger sculpture at the football stadium. 
-      Once inside, take elevator #4 to the 3rd floor; Room D301 will be straight ahead.
+    - "The Commons is located directly in front of Tiger Stadium. It is a short walk from Stadium Garage, at the intersection of Stadium Drive and Ivy Lane."
+    - "Entry Instructions: Use the entrance across from the metal tiger sculpture at the football stadium."
+    - "Take elevator #4 to 3rd floor"
+    - "D301 will be straight ahead"
 
 # ---------------------------------------------------------------------------
-# Driving Directions
+# DRIVING & TRANSIT (Added the 'directions:' key here)
 # ---------------------------------------------------------------------------
 directions_intro: "Directions:"
-    
+directions:
   - from: "From Newark Airport (EWR)"
     desc: >
       Take the AirTrain to Newark Airport Station, then NJ Transit's
@@ -47,20 +49,20 @@ directions_intro: "Directions:"
       Take Route 1 to the Harrison Street exit toward Princeton.
       Turn left onto Faculty Road. Turn right onto Sweetgum Dr.,
       and make the first right turn to Stadium Garage.
-    
+
 # ---------------------------------------------------------------------------
-# Parking
+# PARKING
 # ---------------------------------------------------------------------------
 parking:
   heading: "Parking"
-  intro: "Free daily parking permits for the Princeton University Stadium Drive Garage are required for visitors on weekdays from 7 AM to 4 PM. Registration is done online or by scanning a QR code at the garage. Permits are free of charge, but visitors must register their vehicle license plate."
+  intro: "Free daily parking permits for the Princeton University Stadium Drive Garage are required for visitors on weekdays from 7 AM to 4 PM. Registration is done online or by scanning a QR code at the garage."
   required_heading: "Parking Permit Required:"
   lines:
-    - 'Online: <a href="https://vpermit.com/princeton/ClaimableEvents/Claim?code=VISITOR%20PARKING" target="_blank" rel="noopener">Click here</a> to complete the online registration form to register your vehicle.'
-    - "On-Site: Upon arrival at the Stadium Drive Garage, push the button at the gate to receive a ticket and scan the QR code on the ticket to complete the registration form before leaving your vehicle."
+    - 'Online: <a href="https://vpermit.com/princeton/ClaimableEvents/Claim?code=VISITOR%20PARKING" target="_blank" rel="noopener">Click here</a> to complete the online registration form.'
+    - "On-Site: Upon arrival at the Stadium Drive Garage, push the button at the gate to receive a ticket and scan the QR code."
 
 # ---------------------------------------------------------------------------
-# Campus map
+# CAMPUS MAP
 # ---------------------------------------------------------------------------
 campus_map:
   prefix: "Interactive Campus Map:"
