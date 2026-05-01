@@ -13,9 +13,9 @@ hero:
 
 # Optional "Hosted by" line shown under the hero.
 held_with:
-  prefix: "Hosted by the"
-  link_text: "Cluster of Excellence in Architecture and Systems, Princeton ECE"
-  link_url: ""
+  prefix: "Hosted by "
+  link_text: "Emerging Frontiers in Architecture and Systems, Princeton SEAS Cluster of Excellence"
+  link_url: "https://engineering.princeton.edu/clusters-of-excellence"
 
 # Quick-look info shown right under the hero.
 key_info:
