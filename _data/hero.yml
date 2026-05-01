@@ -7,9 +7,9 @@
 #   subtitle_top    — quiet light-grey serif sub-line
 #   subtitle_bottom — bold brand-color sub-line
 hero:
-  big_title:        "NYASD 2026"
-  subtitle_top:     "NY Architecture and Systems Day"
-  subtitle_bottom:  "Princeton University · May 15, 2026"
+  big_title:        "NY Architecture and Systems Day [NYASD] 2026"
+  subtitle_top:     "Princeton University · May 15, 2026"
+  # subtitle_bottom:  ""
 
 # Optional "Hosted by" line shown under the hero.
 held_with:
