@@ -15,7 +15,6 @@ intro: >
 # ---------------------------------------------------------------------------
 directions_intro: "Directions:"
 
-directions:
   heading: "GPS Address"
   address: "11 Ivy Lane, Princeton, NJ"
   address_url: "https://www.google.com/maps/search/?api=1&query=11+Ivy+Lane%2C+Princeton%2C+NJ"
