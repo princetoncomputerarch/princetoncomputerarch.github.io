@@ -11,13 +11,13 @@ heading: "Organizers"
 
 organizers:
   - name: "Sneha Goenka"
-    role: "Assistant Professor<br>Lead, Cluster of Excellence in Architecture and Systems"
+    role: "Assistant Professor<br>Lead, Emerging Frontiers in Computer Architecture and Systems"
     affiliation: "Princeton University"
     photo: "sneha_picture.png"
-    url:   ""
+    url:   "goenka@princeton.edu"
 
 
-contact_line: "Please contact the organizers if you have any questions."
+contact_line: "Please contact the organizer if you have any questions."
 
 # =============================================================================
 # PROGRAM COMMITTEE — disabled for this event since there are no submissions
