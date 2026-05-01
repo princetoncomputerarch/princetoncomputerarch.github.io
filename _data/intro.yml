@@ -6,20 +6,18 @@
 # no thematic call-for-topics.
 # =============================================================================
 
-heading: "Scope"
+heading: "Overview"
 
 paragraphs:
   - >
-    NY Architecture and Systems Day will be held at Princeton University
-    on Friday, May 15, 2026. Following the tradition of our regional
-    community gatherings, we are bringing together faculty and students
-    from across the area to share research, discuss new ideas, and
-    strengthen our local collaborations in architecture and systems.
+    Following the tradition of our annual regional gatherings, we are bringing together faculty, 
+    industry researchers and students across areas to share research, discuss new ideas, and
+    strengthen our local collaborations in computer architecture and systems.
 
   - >
     This will be an opportunity to engage and exchange ideas with fellow
     computer architects and systems researchers in an informal setting.
-    We hope to see you there!
+    We look forward to seeing you there!
 
 # Optional bulleted topic list. For a community gathering with no formal
 # topic call, leave this empty.
