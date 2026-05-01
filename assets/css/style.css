@@ -137,8 +137,8 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 h2 {
   color: var(--brand);
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
   letter-spacing: -0.02em;
   margin: 3rem 0 1rem 0;
   padding-bottom: .25rem;
