@@ -12,10 +12,10 @@ heading: "Keynote"
 speakers:
   - name: "Viji Srinivasan, IBM"
     photo: "viji_picture.png"
-    title: "TBA"
+    title: "Enabling Enterprise AI with IBM Spyre"
 
     abstract: |
-      TBA
+      AI advancements, in Generative AI and Foundation Models, can significantly enhance mission-critical enterprise workloads. The high computational demands of AI require AI accelerator hardware solutions and full-stack AI infrastructure optimization. IBM Spyre is an enterprise AI accelerator hardware and software solution for IBM systems. This talk will discuss the design and technology approaches taken in the creation of IBM Spyre, and a look towards options for future versions.
 
     bio: |
-      TBA
+      Viji Srinivasan is a Distinguished Engineer and a manager of the accelerator architectures and compilers group at the IBM T.J. Watson Research Center in Yorktown Heights. At IBM, she has worked on various aspects of data management including energy-efficient processor designs, microarchitecture of the memory hierarchies of large-scale servers, cache coherence management of symmetric multiprocessors, accelerators for data analytics applications and more recently end-to-end accelerator solutions for AI. Many of her research contributions have been incorporated into IBM’s Power & System-z Enterprise-class servers. 
