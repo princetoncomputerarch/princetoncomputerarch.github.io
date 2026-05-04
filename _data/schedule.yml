@@ -27,8 +27,8 @@ items:
   - kind: slot
     time: "10:00 AM – 11:00 AM"
     tag: keynote
-    title: "Keynote Talk"
-    speaker: "Speaker: Vijayalakshmi Srinivasan, Distinguished Research Engineer. IBM"
+    title: "Enabling Enterprise AI with IBM Spyre"
+    speaker: "Speaker: Vijayalakshmi Srinivasan, Distinguished Research Engineer, IBM"
 
   - kind: slot
     time: "11:00 AM – 12:00 PM"
