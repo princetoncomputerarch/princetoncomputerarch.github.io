@@ -17,12 +17,13 @@
 #       pdf:          optional URL. shows a "[Paper PDF]" link below
 # =============================================================================
 
-heading: "Schedule (Tentative)"
+heading: "Schedule"
 
 items:
   - kind: slot
     time: "9:00 AM – 10:00 AM"
     title: "Welcome & Refreshments"
+    speaker: "Speakers: Sneha Goenka and Abhishek Bhattachrjee, Princeton University"
 
   - kind: slot
     time: "10:00 AM – 11:00 AM"
@@ -33,14 +34,20 @@ items:
   - kind: slot
     time: "11:00 AM – 12:00 PM"
     title: "Student Presentations — Session 1"
+    speaker: "Chair: Harsh Desai, Yale University"
 
   - kind: slot
     time: "12:00 PM – 1:30 PM"
-    title: "Lunch"
+    title: "Lunch & Remarks by Princeton SEAS Dean Houck"
 
   - kind: slot
-    time: "1:30 PM – 3:00 PM"
+    time: "1:30 PM – 2:45 PM"
     title: "Student Presentations — Session 2"
+    speaker: "Chair: Haiyue Ma, Princeton University"
+
+  - kind: slot
+    time: "2:45 PM – 3:00 PM"
+    title: "Lightning Talks"
 
   - kind: slot
     time: "3:00 PM – 4:30 PM"
